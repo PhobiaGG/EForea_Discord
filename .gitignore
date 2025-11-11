@@ -30,3 +30,11 @@ yarn-error.log*
 # Bot token files
 config.json
 token.json
+
+# Asset files (users add their own images)
+assets/items/*.png
+assets/items/*.jpg
+assets/items/*.gif
+assets/items/*.jpeg
+# But keep the README
+!assets/items/README.md

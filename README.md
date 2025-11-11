@@ -38,6 +38,13 @@ A feature-rich, text-based RPG bot for Discord with combat, gathering, crafting,
 - Experience tracking for multiple skills
 - Equipment level requirements
 
+### 🎨 Pixel Art Support
+- Display custom pixel art for all items
+- Support for local files or URLs
+- Automatic display in embeds (shop, inventory, profile)
+- Easy to add your own custom artwork
+- See [PIXEL_ART_GUIDE.md](PIXEL_ART_GUIDE.md) for details
+
 ## Quick Start
 
 ### Prerequisites
@@ -96,7 +103,7 @@ https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=214748
 
 ### 🛒 Shopping
 - `/shop <name>` - Browse a shop
-- `/buy <item> [quantity]` - Purchase an item
+- `/buy <item> [quantity]` - Purchase an item (use name or ID, e.g. "Wooden Sword")
 - `/daily` - Claim daily login rewards
 
 ### ⚔️ Equipment
@@ -192,9 +199,25 @@ Edit `data/items.json` and add your item to the appropriate category:
     "Strength": 30,
     "CritChance": 5
   },
-  "description": "A custom sword!"
+  "description": "A custom sword!",
+  "image": "assets/items/my_sword.png"
 }
 ```
+
+### Adding Pixel Art to Items
+
+1. Create your pixel art (recommended 64x64 PNG)
+2. Save to `assets/items/` with the item ID as filename
+3. Add `"image": "assets/items/item_id.png"` to the item in items.json
+4. Or use a URL: `"image": "https://i.imgur.com/yourimage.png"`
+
+Items with images will automatically display them in:
+- Shop listings
+- Purchase confirmations
+- Inventory views
+- Profile equipment
+
+**See [PIXEL_ART_GUIDE.md](PIXEL_ART_GUIDE.md) for detailed instructions on creating and adding pixel art.**
 
 ### Adding New Enemies
 Edit `data/enemies.json`:

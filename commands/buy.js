@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { getItem, addItemToInventory, subtractCurrency, getTotalCopper, getRarityColor } = require('../systems/items');
+const { searchItem, addItemToInventory, subtractCurrency, getTotalCopper, getRarityColor } = require('../systems/items');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,7 +8,7 @@ module.exports = {
 		.addStringOption(option =>
 			option
 				.setName('item')
-				.setDescription('Item ID to purchase')
+				.setDescription('Item name or ID (e.g. "Wooden Sword" or "wooden_sword")')
 				.setRequired(true)
 		)
 		.addIntegerOption(option =>
@@ -20,23 +20,27 @@ module.exports = {
 		),
 
 	async execute(interaction, client) {
-		const itemId = interaction.options.getString('item');
+		const itemSearch = interaction.options.getString('item');
 		const quantity = interaction.options.getInteger('quantity') || 1;
 		const profile = client.db.getProfile(interaction.user.id);
 
-		const item = getItem(itemId);
+		// Search for item by name or ID
+		const itemResult = searchItem(itemSearch);
 
-		if (!item) {
+		if (!itemResult) {
 			return interaction.reply({
-				content: '❌ Item not found! Use `/shop` to browse available items.',
+				content: `❌ Item "${itemSearch}" not found! Use \`/shop\` to browse available items.`,
 				ephemeral: true
 			});
 		}
 
+		const item = itemResult;
+		const itemId = itemResult.id;
+
 		// Check level requirement
 		if (item.level && profile.PlrStats.Level < item.level) {
 			return interaction.reply({
-				content: `❌ You need to be level ${item.level} to purchase this item!`,
+				content: `❌ You need to be level ${item.level} to purchase **${item.name}**!`,
 				ephemeral: true
 			});
 		}
@@ -56,7 +60,7 @@ module.exports = {
 		// For unique items, only allow buying 1 at a time
 		if (!item.stackable && quantity > 1) {
 			return interaction.reply({
-				content: `❌ ${item.name} is not stackable. You can only buy 1 at a time.`,
+				content: `❌ **${item.name}** is not stackable. You can only buy 1 at a time.`,
 				ephemeral: true
 			});
 		}
@@ -86,6 +90,25 @@ module.exports = {
 				}
 			)
 			.setTimestamp();
+
+		// Add item image if available
+		if (item.image) {
+			// Check if it's a URL or local file
+			if (item.image.startsWith('http://') || item.image.startsWith('https://')) {
+				embed.setThumbnail(item.image);
+			} else {
+				// Local file path
+				const fs = require('fs');
+				const path = require('path');
+				const imagePath = path.join(__dirname, '..', item.image);
+
+				if (fs.existsSync(imagePath)) {
+					embed.setThumbnail(`attachment://${path.basename(imagePath)}`);
+					const attachment = new require('discord.js').AttachmentBuilder(imagePath);
+					return interaction.reply({ embeds: [embed], files: [attachment] });
+				}
+			}
+		}
 
 		await interaction.reply({ embeds: [embed] });
 	}

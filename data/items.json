@@ -12,7 +12,8 @@
         "Strength": 5,
         "AtkSpeed": 0.1
       },
-      "description": "A basic wooden sword. Better than nothing."
+      "description": "A basic wooden sword. Better than nothing.",
+      "image": "assets/items/wooden_sword.png"
     },
     "iron_sword": {
       "id": "iron_sword",

@@ -27,6 +27,50 @@ function getItem(itemId) {
 }
 
 /**
+ * Search for item by name or ID (case-insensitive)
+ * @param {string} search - Search term (name or ID)
+ * @returns {Object|null} Item data with ID, or null if not found
+ */
+function searchItem(search) {
+	const searchLower = search.toLowerCase().trim();
+
+	// First try exact ID match
+	if (allItems[searchLower]) {
+		return { id: searchLower, ...allItems[searchLower] };
+	}
+
+	// Try ID match with underscores replaced by spaces
+	const searchWithUnderscores = searchLower.replace(/ /g, '_');
+	if (allItems[searchWithUnderscores]) {
+		return { id: searchWithUnderscores, ...allItems[searchWithUnderscores] };
+	}
+
+	// Try name match (exact)
+	for (const id in allItems) {
+		if (allItems[id].name && allItems[id].name.toLowerCase() === searchLower) {
+			return { id, ...allItems[id] };
+		}
+	}
+
+	// Try partial name match
+	for (const id in allItems) {
+		if (allItems[id].name && allItems[id].name.toLowerCase().includes(searchLower)) {
+			return { id, ...allItems[id] };
+		}
+	}
+
+	return null;
+}
+
+/**
+ * Get all items (for searching)
+ * @returns {Object} All items with their IDs
+ */
+function getAllItems() {
+	return allItems;
+}
+
+/**
  * Get all items in a category
  * @param {string} category - The category (weapons, armor, consumables, etc.)
  * @returns {Object} Items in that category
@@ -387,6 +431,8 @@ function subtractCurrency(profile, copperAmount) {
 
 module.exports = {
 	getItem,
+	searchItem,
+	getAllItems,
 	getItemsByCategory,
 	getRarityColor,
 	getRarityEmoji,

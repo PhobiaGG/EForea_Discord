@@ -68,7 +68,7 @@ module.exports = {
 
 		// Show player balance
 		const playerBalance = getTotalCopper(profile.Currency);
-		embed.setFooter({ text: `Your balance: ${playerBalance} Copper | Use /buy to purchase` });
+		embed.setFooter({ text: `Your balance: ${playerBalance} Copper | Use /buy <item name> to purchase` });
 
 		await interaction.reply({ embeds: [embed] });
 	}
