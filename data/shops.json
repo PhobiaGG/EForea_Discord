@@ -1,0 +1,50 @@
+{
+  "general_store": {
+    "name": "General Store",
+    "description": "A shop selling basic equipment and consumables.",
+    "items": [
+      { "item": "wooden_sword", "stock": -1 },
+      { "item": "leather_helmet", "stock": -1 },
+      { "item": "leather_chestplate", "stock": -1 },
+      { "item": "leather_greaves", "stock": -1 },
+      { "item": "leather_gauntlets", "stock": -1 },
+      { "item": "health_potion", "stock": -1 },
+      { "item": "mana_potion", "stock": -1 },
+      { "item": "wooden_pickaxe", "stock": -1 },
+      { "item": "wooden_axe", "stock": -1 },
+      { "item": "fishing_rod", "stock": -1 }
+    ]
+  },
+  "blacksmith": {
+    "name": "Blacksmith",
+    "description": "A forge selling quality weapons and armor.",
+    "items": [
+      { "item": "iron_sword", "stock": -1 },
+      { "item": "iron_helmet", "stock": -1 },
+      { "item": "iron_chestplate", "stock": -1 },
+      { "item": "steel_greatsword", "stock": -1 },
+      { "item": "steel_plate_armor", "stock": -1 },
+      { "item": "iron_pickaxe", "stock": -1 }
+    ]
+  },
+  "magic_shop": {
+    "name": "Magic Shop",
+    "description": "A mystical shop selling magical items and accessories.",
+    "items": [
+      { "item": "enchanted_staff", "stock": -1 },
+      { "item": "bronze_ring", "stock": -1 },
+      { "item": "silver_amulet", "stock": -1 },
+      { "item": "warrior_pendant", "stock": -1 },
+      { "item": "mana_potion", "stock": -1 },
+      { "item": "strength_elixir", "stock": -1 },
+      { "item": "magic_crystal", "stock": 5 }
+    ]
+  },
+  "rare_merchant": {
+    "name": "Rare Merchant",
+    "description": "A mysterious merchant selling legendary items.",
+    "items": [
+      { "item": "vampiric_ring", "stock": 1 }
+    ]
+  }
+}

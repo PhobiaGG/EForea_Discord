@@ -1,0 +1,184 @@
+{
+  "slime": {
+    "id": "slime",
+    "name": "Slime",
+    "level": 1,
+    "health": 50,
+    "stats": {
+      "Strength": 3,
+      "Resistence": 1,
+      "Speed": 50
+    },
+    "rewards": {
+      "exp": 10,
+      "copper": [5, 15]
+    },
+    "loot": [
+      { "item": "health_potion", "chance": 0.15 }
+    ],
+    "description": "A gelatinous blob that wobbles menacingly."
+  },
+  "goblin": {
+    "id": "goblin",
+    "name": "Goblin",
+    "level": 3,
+    "health": 80,
+    "stats": {
+      "Strength": 8,
+      "Resistence": 3,
+      "Speed": 80,
+      "CritChance": 5
+    },
+    "rewards": {
+      "exp": 25,
+      "copper": [15, 35]
+    },
+    "loot": [
+      { "item": "wooden_sword", "chance": 0.1 },
+      { "item": "copper_ore", "chance": 0.3 }
+    ],
+    "description": "A small, mischievous creature with crude weapons."
+  },
+  "wolf": {
+    "id": "wolf",
+    "name": "Wolf",
+    "level": 5,
+    "health": 120,
+    "stats": {
+      "Strength": 15,
+      "Resistence": 5,
+      "Speed": 120,
+      "CritChance": 10
+    },
+    "rewards": {
+      "exp": 40,
+      "copper": [25, 50]
+    },
+    "loot": [
+      { "item": "leather", "chance": 0.6 },
+      { "item": "health_potion", "chance": 0.2 }
+    ],
+    "description": "A fierce predator with sharp fangs and claws."
+  },
+  "skeleton": {
+    "id": "skeleton",
+    "name": "Skeleton Warrior",
+    "level": 7,
+    "health": 150,
+    "stats": {
+      "Strength": 20,
+      "Resistence": 8,
+      "Speed": 90,
+      "CritDmg": 15
+    },
+    "rewards": {
+      "exp": 60,
+      "copper": [40, 80]
+    },
+    "loot": [
+      { "item": "iron_sword", "chance": 0.08 },
+      { "item": "iron_ore", "chance": 0.25 },
+      { "item": "mana_potion", "chance": 0.2 }
+    ],
+    "description": "An undead warrior clad in rusty armor."
+  },
+  "orc": {
+    "id": "orc",
+    "name": "Orc Brute",
+    "level": 10,
+    "health": 250,
+    "stats": {
+      "Strength": 35,
+      "Resistence": 15,
+      "Speed": 70,
+      "CritDmg": 20
+    },
+    "rewards": {
+      "exp": 100,
+      "copper": [80, 150],
+      "silver": [0, 2]
+    },
+    "loot": [
+      { "item": "steel_greatsword", "chance": 0.05 },
+      { "item": "iron_chestplate", "chance": 0.12 },
+      { "item": "strength_elixir", "chance": 0.2 }
+    ],
+    "description": "A massive brute wielding a crude weapon."
+  },
+  "dark_mage": {
+    "id": "dark_mage",
+    "name": "Dark Mage",
+    "level": 12,
+    "health": 180,
+    "stats": {
+      "Strength": 10,
+      "Wisdom": 40,
+      "Resistence": 10,
+      "Speed": 100,
+      "Mana": 200
+    },
+    "rewards": {
+      "exp": 130,
+      "copper": [100, 200],
+      "silver": [1, 3]
+    },
+    "loot": [
+      { "item": "enchanted_staff", "chance": 0.1 },
+      { "item": "silver_amulet", "chance": 0.15 },
+      { "item": "magic_crystal", "chance": 0.3 },
+      { "item": "mana_potion", "chance": 0.4 }
+    ],
+    "description": "A mage who has delved into forbidden magic."
+  },
+  "dragon_whelp": {
+    "id": "dragon_whelp",
+    "name": "Dragon Whelp",
+    "level": 15,
+    "health": 400,
+    "stats": {
+      "Strength": 45,
+      "Resistence": 25,
+      "Speed": 110,
+      "CritChance": 15,
+      "CritDmg": 30
+    },
+    "rewards": {
+      "exp": 200,
+      "copper": [200, 400],
+      "silver": [2, 5],
+      "gold": [0, 1]
+    },
+    "loot": [
+      { "item": "steel_plate_armor", "chance": 0.08 },
+      { "item": "warrior_pendant", "chance": 0.12 },
+      { "item": "magic_crystal", "chance": 0.4 },
+      { "item": "strength_elixir", "chance": 0.3 }
+    ],
+    "description": "A young dragon, still deadly despite its age."
+  },
+  "ancient_golem": {
+    "id": "ancient_golem",
+    "name": "Ancient Golem",
+    "level": 20,
+    "health": 600,
+    "stats": {
+      "Strength": 60,
+      "Resistence": 40,
+      "Speed": 60,
+      "CritDmg": 25
+    },
+    "rewards": {
+      "exp": 300,
+      "copper": [300, 500],
+      "silver": [3, 8],
+      "gold": [1, 2]
+    },
+    "loot": [
+      { "item": "vampiric_ring", "chance": 0.05 },
+      { "item": "steel_plate_armor", "chance": 0.15 },
+      { "item": "magic_crystal", "chance": 0.5 },
+      { "item": "iron_ore", "chance": 0.6 }
+    ],
+    "description": "A massive construct of stone and magic, guarding ancient ruins."
+  }
+}

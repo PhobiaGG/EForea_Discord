@@ -1,0 +1,26 @@
+{
+  "name": "eforea-discord-rpg",
+  "version": "1.0.0",
+  "description": "A text-based Discord RPG bot with combat, gathering, and progression systems",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node bot.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "rpg",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=16.11.0"
+  }
+}

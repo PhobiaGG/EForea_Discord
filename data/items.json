@@ -1,0 +1,361 @@
+{
+  "weapons": {
+    "wooden_sword": {
+      "id": "wooden_sword",
+      "name": "Wooden Sword",
+      "type": "weapon",
+      "slot": "WeaponSlotOne",
+      "rarity": "common",
+      "level": 1,
+      "price": 50,
+      "stats": {
+        "Strength": 5,
+        "AtkSpeed": 0.1
+      },
+      "description": "A basic wooden sword. Better than nothing."
+    },
+    "iron_sword": {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "type": "weapon",
+      "slot": "WeaponSlotOne",
+      "rarity": "uncommon",
+      "level": 5,
+      "price": 250,
+      "stats": {
+        "Strength": 15,
+        "AtkSpeed": 0.2
+      },
+      "description": "A sturdy iron blade that has served many warriors."
+    },
+    "steel_greatsword": {
+      "id": "steel_greatsword",
+      "name": "Steel Greatsword",
+      "type": "weapon",
+      "slot": "WeaponSlotOne",
+      "rarity": "rare",
+      "level": 10,
+      "price": 800,
+      "stats": {
+        "Strength": 35,
+        "AtkSpeed": -0.1,
+        "CritDmg": 10
+      },
+      "description": "A massive two-handed blade that deals devastating blows."
+    },
+    "enchanted_staff": {
+      "id": "enchanted_staff",
+      "name": "Enchanted Staff",
+      "type": "weapon",
+      "slot": "WeaponSlotOne",
+      "rarity": "rare",
+      "level": 8,
+      "price": 600,
+      "stats": {
+        "Wisdom": 25,
+        "Mana": 50
+      },
+      "description": "A staff crackling with magical energy."
+    }
+  },
+  "armor": {
+    "leather_helmet": {
+      "id": "leather_helmet",
+      "name": "Leather Helmet",
+      "type": "armor",
+      "slot": "Helmet",
+      "rarity": "common",
+      "level": 1,
+      "price": 40,
+      "stats": {
+        "BaseHealth": 10,
+        "Resistence": 2
+      },
+      "description": "Basic leather headgear."
+    },
+    "leather_chestplate": {
+      "id": "leather_chestplate",
+      "name": "Leather Chestplate",
+      "type": "armor",
+      "slot": "Chestplate",
+      "rarity": "common",
+      "level": 1,
+      "price": 60,
+      "stats": {
+        "BaseHealth": 20,
+        "Resistence": 3
+      },
+      "description": "A leather tunic that provides basic protection."
+    },
+    "leather_greaves": {
+      "id": "leather_greaves",
+      "name": "Leather Greaves",
+      "type": "armor",
+      "slot": "Greaves",
+      "rarity": "common",
+      "level": 1,
+      "price": 50,
+      "stats": {
+        "BaseHealth": 15,
+        "Resistence": 2,
+        "Speed": 5
+      },
+      "description": "Lightweight leather leg guards."
+    },
+    "leather_gauntlets": {
+      "id": "leather_gauntlets",
+      "name": "Leather Gauntlets",
+      "type": "armor",
+      "slot": "Gauntlets",
+      "rarity": "common",
+      "level": 1,
+      "price": 40,
+      "stats": {
+        "BaseHealth": 10,
+        "Resistence": 2
+      },
+      "description": "Simple leather gloves."
+    },
+    "iron_helmet": {
+      "id": "iron_helmet",
+      "name": "Iron Helmet",
+      "type": "armor",
+      "slot": "Helmet",
+      "rarity": "uncommon",
+      "level": 5,
+      "price": 200,
+      "stats": {
+        "BaseHealth": 30,
+        "Resistence": 8
+      },
+      "description": "A sturdy iron helm."
+    },
+    "iron_chestplate": {
+      "id": "iron_chestplate",
+      "name": "Iron Chestplate",
+      "type": "armor",
+      "slot": "Chestplate",
+      "rarity": "uncommon",
+      "level": 5,
+      "price": 300,
+      "stats": {
+        "BaseHealth": 50,
+        "Resistence": 12
+      },
+      "description": "Heavy iron armor that provides solid protection."
+    },
+    "steel_plate_armor": {
+      "id": "steel_plate_armor",
+      "name": "Steel Plate Armor",
+      "type": "armor",
+      "slot": "Chestplate",
+      "rarity": "rare",
+      "level": 10,
+      "price": 900,
+      "stats": {
+        "BaseHealth": 100,
+        "Resistence": 25,
+        "Speed": -10
+      },
+      "description": "Full plate armor forged from the finest steel."
+    }
+  },
+  "accessories": {
+    "bronze_ring": {
+      "id": "bronze_ring",
+      "name": "Bronze Ring",
+      "type": "accessory",
+      "slot": "AccessoryOne",
+      "rarity": "common",
+      "level": 1,
+      "price": 100,
+      "stats": {
+        "Fortune": 0.5
+      },
+      "description": "A simple bronze ring that brings minor luck."
+    },
+    "silver_amulet": {
+      "id": "silver_amulet",
+      "name": "Silver Amulet",
+      "type": "accessory",
+      "slot": "AccessoryOne",
+      "rarity": "uncommon",
+      "level": 5,
+      "price": 400,
+      "stats": {
+        "Mana": 30,
+        "Wisdom": 10
+      },
+      "description": "An amulet that enhances magical abilities."
+    },
+    "warrior_pendant": {
+      "id": "warrior_pendant",
+      "name": "Warrior's Pendant",
+      "type": "accessory",
+      "slot": "AccessoryOne",
+      "rarity": "rare",
+      "level": 8,
+      "price": 700,
+      "stats": {
+        "Strength": 15,
+        "CritChance": 3
+      },
+      "description": "A pendant worn by legendary warriors."
+    },
+    "vampiric_ring": {
+      "id": "vampiric_ring",
+      "name": "Vampiric Ring",
+      "type": "accessory",
+      "slot": "AccessoryTwo",
+      "rarity": "epic",
+      "level": 15,
+      "price": 2000,
+      "stats": {
+        "HealthRegen": 5,
+        "Vitality": 2
+      },
+      "description": "Drains life force to sustain its wearer."
+    }
+  },
+  "consumables": {
+    "health_potion": {
+      "id": "health_potion",
+      "name": "Health Potion",
+      "type": "consumable",
+      "rarity": "common",
+      "price": 25,
+      "stackable": true,
+      "effect": {
+        "type": "heal",
+        "amount": 50
+      },
+      "description": "Restores 50 health points."
+    },
+    "mana_potion": {
+      "id": "mana_potion",
+      "name": "Mana Potion",
+      "type": "consumable",
+      "rarity": "common",
+      "price": 30,
+      "stackable": true,
+      "effect": {
+        "type": "mana",
+        "amount": 50
+      },
+      "description": "Restores 50 mana points."
+    },
+    "strength_elixir": {
+      "id": "strength_elixir",
+      "name": "Strength Elixir",
+      "type": "consumable",
+      "rarity": "uncommon",
+      "price": 100,
+      "stackable": true,
+      "effect": {
+        "type": "buff",
+        "stat": "Strength",
+        "amount": 10,
+        "duration": 300
+      },
+      "description": "Temporarily increases Strength by 10 for 5 minutes."
+    }
+  },
+  "materials": {
+    "copper_ore": {
+      "id": "copper_ore",
+      "name": "Copper Ore",
+      "type": "material",
+      "rarity": "common",
+      "price": 5,
+      "stackable": true,
+      "description": "Raw copper ore. Can be smelted or sold."
+    },
+    "iron_ore": {
+      "id": "iron_ore",
+      "name": "Iron Ore",
+      "type": "material",
+      "rarity": "uncommon",
+      "price": 15,
+      "stackable": true,
+      "description": "Raw iron ore. Essential for crafting."
+    },
+    "wood": {
+      "id": "wood",
+      "name": "Wood",
+      "type": "material",
+      "rarity": "common",
+      "price": 3,
+      "stackable": true,
+      "description": "Basic wood. Used in many recipes."
+    },
+    "leather": {
+      "id": "leather",
+      "name": "Leather",
+      "type": "material",
+      "rarity": "common",
+      "price": 8,
+      "stackable": true,
+      "description": "Processed leather. Used for armor crafting."
+    },
+    "magic_crystal": {
+      "id": "magic_crystal",
+      "name": "Magic Crystal",
+      "type": "material",
+      "rarity": "rare",
+      "price": 50,
+      "stackable": true,
+      "description": "A crystal pulsing with magical energy."
+    }
+  },
+  "tools": {
+    "wooden_pickaxe": {
+      "id": "wooden_pickaxe",
+      "name": "Wooden Pickaxe",
+      "type": "tool",
+      "rarity": "common",
+      "level": 1,
+      "price": 40,
+      "stats": {
+        "MiningSpeed": 1
+      },
+      "description": "A basic pickaxe for mining."
+    },
+    "iron_pickaxe": {
+      "id": "iron_pickaxe",
+      "name": "Iron Pickaxe",
+      "type": "tool",
+      "rarity": "uncommon",
+      "level": 5,
+      "price": 200,
+      "stats": {
+        "MiningSpeed": 2,
+        "BreakingPower": 1
+      },
+      "description": "An improved pickaxe that mines faster."
+    },
+    "wooden_axe": {
+      "id": "wooden_axe",
+      "name": "Wooden Axe",
+      "type": "tool",
+      "rarity": "common",
+      "level": 1,
+      "price": 40,
+      "stats": {
+        "ForagingSpeed": 1
+      },
+      "description": "A basic axe for chopping wood."
+    },
+    "fishing_rod": {
+      "id": "fishing_rod",
+      "name": "Fishing Rod",
+      "type": "tool",
+      "rarity": "common",
+      "level": 1,
+      "price": 50,
+      "stats": {
+        "FishingSpeed": 1
+      },
+      "description": "A simple fishing rod."
+    }
+  }
+}
